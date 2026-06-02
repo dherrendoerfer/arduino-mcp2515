@@ -132,12 +132,7 @@ Note: To transfer data on high speed of CAN interface via UART dont forget to up
 Late SPI init for controllers that require manual SPI pin definition
 ```C++
 MCP2515 mcp2515(10,10000000,&SPI,false);
-```
-<br>
 
-Desired SPI interface and transfer speed are set in constructor
-
-```C++
 void setup() {
     SPI.setRX(4);  // MISO (late SPI init)
     SPI.setTX(3);  // MOSI
@@ -151,7 +146,8 @@ void setup() {
 }
 ```
 <br>
-
+Desired SPI interface and transfer speed are set in constructor
+<br>
 SPI config is completed in setup() and SPI.begin() is called. 
 
 ## Frame data format
